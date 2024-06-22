@@ -1931,11 +1931,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Media Queries for responsiveness */
 @media (max-width: 600px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 5px; /* Adjust gap for small screens */
+    }
+    
     .resume-button, .github-button {
         width: 100%; /* Make buttons take full width on small screens */
         margin: 5px 0; /* Add some space between buttons */
     }
-
+}
 
 
 }
