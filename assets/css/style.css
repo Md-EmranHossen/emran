@@ -1882,43 +1882,56 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
  
-
-
-
-
-
-.button-container {
+.button-container {  /* Can be renamed to .button-section */
   display: flex;
-  justify-content: space-between; /* Space buttons horizontally on larger screens */
-  margin: 10px 0; /* Add some optional margin for spacing */
+  justify-content: center; /* Center buttons horizontally */
 }
 
-.resume-button,
+.resume-button, .github-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2c2b2b; /* Gray background */
+  color: #ffffff; /* White text */
+  border: 2px solid #ffffff; /* White border */
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px; /* Rounded corners */
+  margin: 0 10px; /* Add space between buttons */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.resume-button:hover, .github-button:hover {
+  background-color: #292828; /* Darker gray background on hover */
+  border-color: #ffffff; /* Keep white border on hover */
+}
+
+/* Optional: Style for GitHub button (change icon as needed) */
 .github-button {
-  display: inline-block; /* Ensures consistent button behavior */
-  padding: 10px 20px; /* Adjust padding for desired button size */
-  border: 1px solid #ddd; /* Add a border (optional) */
-  border-radius: 5px; /* Add rounded corners (optional) */
-  text-decoration: none; /* Remove underline from button text */
-  color: #333; /* Set button text color */
-  font-weight: bold; /* Make button text bold (optional) */
-  transition: background-color 0.2s ease-in-out; /* Add smooth transition on hover */
+  background-color: #333; /* Darker gray for GitHub button */
+  color: #fff; /* White text for GitHub button */
 }
 
-.resume-button:hover,
-.github-button:hover {
-  background-color: #eee; /* Change button background color on hover */
+.github-button::before {
+  content: "\f09b"; /* Font Awesome icon for GitHub (adjust based on font library) */
+  font-family: FontAwesome; /* Adjust font family for your icon library */
+  font-size: 16px;
+  margin-right: 5px; /* Add spacing between icon and text */
 }
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-  .button-container {
-    flex-direction: column; /* Stack buttons vertically on small screens */
-  }
-  .resume-button,
-  .github-button {
-    margin: 5px auto; /* Center buttons horizontally on small screens */
+/* Media query for responsive behavior (adjust breakpoint as needed) */
+@media (max-width: 768px) {
+  .resume-button, .github-button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
+
+
+
+
+
 
 
 
