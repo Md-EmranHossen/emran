@@ -1881,23 +1881,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-	 * RESUME
-	 */
-
-  .timeline-text { max-width: 700px; }
+ 
 
 
 
 
 
 
-
-/**
-	 * RESUME
-	 */
-
-  .button-container {
+.button-container {
     display: flex;
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
@@ -1941,6 +1932,7 @@ textarea.form-input::-webkit-resizer { display: none; }
         margin: 5px 0; /* Add some space between buttons */
     }
 }
+
 
 
 }
